@@ -2,7 +2,7 @@
 ; BIND data file for local loopback interface
 ;
 $TTL	604800
-@	IN	SOA	ns1.rayquen.navi. root.rayquen.navi. (
+@	IN	SOA	ns1.rayquen.wired. root.rayquen.wired. (
 			      1		; Serial
 			 604800		; Refresh
 			  86400		; Retry
@@ -10,7 +10,7 @@ $TTL	604800
 			 604800 )	; Negative Cache TTL
 
 ; name servers - NS records
-@	IN	NS	ns1.rayquen.navi.
+@	IN	NS	ns1.rayquen.wired.
 
 ; name servers - A records
 @	IN	A	192.168.0.56
@@ -18,6 +18,5 @@ ns1	IN	A	192.168.0.56
 mx	IN	A	192.168.0.56
 
 ; 192.168.0.0/24 - A records
-lab.rayquen.navi.	IN	A	192.168.0.56
-mail.rayquen.navi.	IN	A	192.168.0.56
+test.rayquen.wired.	IN	A	192.168.0.56
 
