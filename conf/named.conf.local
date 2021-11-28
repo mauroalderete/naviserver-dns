@@ -12,6 +12,13 @@ zone "kubernetes.wired" {
 	also-notify { 192.168.0.10; };
 };
 
+zone "gitlab.wired" {
+	type master;
+	file "/etc/bind/zones/db.gitlab.wired";
+	allow-transfer { 192.168.0.10; };
+	also-notify { 192.168.0.10; };
+};
+
 zone "hyrule.wired" {
 	type master;
 	file "/etc/bind/zones/db.hyrule.wired";
