@@ -1,13 +1,20 @@
 zone "navi.wired" {
 	type master;
-	file "/etc/bind/zones/db.inferno.navi";
+	file "/etc/bind/zones/db.navi.wired";
+	allow-transfer { 192.168.0.10; };
+	also-notify { 192.168.0.10; };
+};
+
+zone "kubernetes.wired" {
+	type master;
+	file "/etc/bind/zones/db.kubernetes.wired";
 	allow-transfer { 192.168.0.10; };
 	also-notify { 192.168.0.10; };
 };
 
 zone "hyrule.wired" {
 	type master;
-	file "/etc/bind/zones/db.rayquen.navi";
+	file "/etc/bind/zones/db.hyrule.wired";
 	allow-transfer { 192.168.0.10; };
 	also-notify { 192.168.0.10; };
 };
@@ -21,7 +28,7 @@ zone "rayquen.wired" {
 
 zone "rayquenx.wired" {
 	type master;
-	file "/etc/bind/zones/db.rayquen.navi";
+	file "/etc/bind/zones/db.rayquenx.navi";
 	allow-transfer { 192.168.0.10; };
 	also-notify { 192.168.0.10; };
 };
